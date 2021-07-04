@@ -1,0 +1,406 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Browser" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mC3-fN-Ed7">
+                                <rect key="frame" x="0.0" y="95" width="428" height="751"/>
+                                <color key="backgroundColor" red="0.98039215686274506" green="0.98039215686274506" blue="0.98039215686274506" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <gestureRecognizers/>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
+                            <progressView opaque="NO" alpha="0.5" contentMode="scaleToFill" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="vOP-qk-kEJ">
+                                <rect key="frame" x="20" y="89" width="388" height="3"/>
+                                <color key="tintColor" systemColor="systemBlueColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="388" id="Jqp-G8-UgN"/>
+                                    <constraint firstAttribute="height" constant="3" id="sl0-05-neD"/>
+                                </constraints>
+                            </progressView>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="qsH-Yv-f8U">
+                                <rect key="frame" x="0.0" y="846" width="428" height="80"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" enabled="NO" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Imo-km-zHu">
+                                        <rect key="frame" x="0.0" y="0.0" width="107" height="80"/>
+                                        <state key="normal">
+                                            <imageReference key="image" image="chevron.backward" catalog="system" symbolScale="large"/>
+                                            <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="small"/>
+                                        </state>
+                                        <state key="disabled">
+                                            <imageReference key="image" image="chevron.backward" catalog="system" symbolScale="small"/>
+                                            <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="small"/>
+                                        </state>
+                                        <state key="selected">
+                                            <imageReference key="image" image="chevron.backward" catalog="system" symbolScale="large"/>
+                                            <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="large"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="goBack:" destination="BYZ-38-t0r" eventType="touchUpInside" id="mCA-0s-OeE"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" enabled="NO" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3qF-5z-ME6">
+                                        <rect key="frame" x="107" y="0.0" width="107" height="80"/>
+                                        <color key="tintColor" systemColor="linkColor"/>
+                                        <state key="normal">
+                                            <imageReference key="image" image="chevron.forward" catalog="system" symbolScale="large"/>
+                                            <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="small"/>
+                                        </state>
+                                        <state key="disabled">
+                                            <imageReference key="image" image="chevron.forward" catalog="system" symbolScale="large"/>
+                                            <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="large"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="goForward:" destination="BYZ-38-t0r" eventType="touchUpInside" id="RQQ-R9-3vA"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H77-bf-9e8">
+                                        <rect key="frame" x="214" y="0.0" width="107" height="80"/>
+                                        <state key="normal">
+                                            <imageReference key="image" image="plus" catalog="system" symbolScale="large"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="addBookMarkButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="LBC-nd-IpY"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Af-PG-xDa">
+                                        <rect key="frame" x="321" y="0.0" width="107" height="80"/>
+                                        <state key="normal">
+                                            <imageReference key="image" image="book" catalog="system" symbolScale="large"/>
+                                        </state>
+                                        <connections>
+                                            <segue destination="1gz-aI-naJ" kind="show" id="KH1-zC-m4J"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.98039215686274506" green="0.98039215686274506" blue="0.98039215686274506" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="LYL-Hd-t26"/>
+                                </constraints>
+                            </stackView>
+                            <searchBar contentMode="redraw" searchBarStyle="minimal" showsBookmarkButton="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Mjf-Nl-NLB">
+                                <rect key="frame" x="0.0" y="44" width="428" height="51"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="search" textContentType="url"/>
+                                <scopeButtonTitles>
+                                    <string>Title</string>
+                                    <string>Title</string>
+                                </scopeButtonTitles>
+                                <variation key="widthClass=regular">
+                                    <nil key="barTintColor"/>
+                                </variation>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="abp-mx-gi6"/>
+                                </connections>
+                            </searchBar>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" red="0.98039215686274506" green="0.98039215686274506" blue="0.98039215686274506" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="vOP-qk-kEJ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="14f-wd-88h"/>
+                            <constraint firstItem="Mjf-Nl-NLB" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="3qb-m1-F9C"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="qsH-Yv-f8U" secondAttribute="trailing" id="CJG-3p-7vV"/>
+                            <constraint firstItem="Mjf-Nl-NLB" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="LRZ-gG-hpw"/>
+                            <constraint firstItem="Mjf-Nl-NLB" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="Trv-zZ-c1F"/>
+                            <constraint firstItem="mC3-fN-Ed7" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="d8g-Kc-kGb"/>
+                            <constraint firstItem="mC3-fN-Ed7" firstAttribute="top" secondItem="Mjf-Nl-NLB" secondAttribute="bottom" id="ejY-r2-NDC"/>
+                            <constraint firstItem="vOP-qk-kEJ" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="45" id="g7a-kb-PKg"/>
+                            <constraint firstAttribute="bottom" secondItem="qsH-Yv-f8U" secondAttribute="bottom" id="hW0-8U-0QS"/>
+                            <constraint firstAttribute="bottom" secondItem="mC3-fN-Ed7" secondAttribute="bottom" constant="80" id="hv8-er-ih8"/>
+                            <constraint firstItem="qsH-Yv-f8U" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="rtN-lI-VML"/>
+                            <constraint firstItem="mC3-fN-Ed7" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="z0Z-0b-ops"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="UUp-OF-7Ux"/>
+                    <connections>
+                        <outlet property="goBackButton" destination="Imo-km-zHu" id="SoQ-sS-URD"/>
+                        <outlet property="goForwardButton" destination="3qF-5z-ME6" id="pPH-6q-6sB"/>
+                        <outlet property="progressView" destination="vOP-qk-kEJ" id="U3R-2k-ZKm"/>
+                        <outlet property="searchBar" destination="Mjf-Nl-NLB" id="OI9-XN-Q5e"/>
+                        <outlet property="webView" destination="mC3-fN-Ed7" id="Qwy-f6-fsx"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2394.3925233644859" y="-270.19438444924407"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="aJ3-FI-kja">
+            <objects>
+                <navigationController id="1gz-aI-naJ" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="nmi-ey-uai"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="ZaE-iw-6uU">
+                        <rect key="frame" x="0.0" y="0.0" width="428" height="56"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="dIG-Im-cM2" kind="relationship" relationship="rootViewController" id="JrM-J8-HZx"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tzV-oH-XdD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1534" y="-270"/>
+        </scene>
+        <!--Segmented View Controller-->
+        <scene sceneID="B3p-6R-UsD">
+            <objects>
+                <viewController id="dIG-Im-cM2" customClass="SegmentedViewController" customModule="Browser" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="JY8-Sf-VxL">
+                        <rect key="frame" x="0.0" y="0.0" width="428" height="872"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rWz-fy-IZn">
+                                <rect key="frame" x="0.0" y="95" width="428" height="777"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                <connections>
+                                    <segue destination="GtW-qc-yVn" kind="embed" id="Odr-Q3-A74"/>
+                                </connections>
+                            </containerView>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="yI1-eE-w9R">
+                                <rect key="frame" x="0.0" y="56" width="428" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <segments>
+                                    <segment title="" image="book" catalog="system"/>
+                                    <segment title="" image="clock" catalog="system"/>
+                                </segments>
+                                <connections>
+                                    <action selector="didChangeSegment:" destination="dIG-Im-cM2" eventType="valueChanged" id="lnJ-VO-neo"/>
+                                </connections>
+                            </segmentedControl>
+                            <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fEd-88-Bfs">
+                                <rect key="frame" x="0.0" y="95" width="428" height="777"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                <connections>
+                                    <segue destination="GBY-H3-buR" kind="embed" id="zGt-Up-syg"/>
+                                </connections>
+                            </containerView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="t69-at-JEa"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="2vj-LY-SSZ">
+                        <nil key="title"/>
+                        <barButtonItem key="rightBarButtonItem" style="done" systemItem="done" id="8cf-2P-ayu">
+                            <connections>
+                                <action selector="globalDoneButton:" destination="om2-3x-Uuc" id="990-dS-s88"/>
+                                <segue destination="om2-3x-Uuc" kind="unwind" unwindAction="unwindToMain:" id="BgJ-r3-r4M"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="BookMarkVC" destination="rWz-fy-IZn" id="vnQ-vR-tPD"/>
+                        <outlet property="HistoryVC" destination="fEd-88-Bfs" id="0Wc-Gw-gzu"/>
+                        <outlet property="NavigationBar" destination="2vj-LY-SSZ" id="tx1-WB-ueI"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WAs-Yj-wDK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="om2-3x-Uuc" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="-642.0560747663551" y="-270.19438444924407"/>
+        </scene>
+        <!--Book Mark View Controller-->
+        <scene sceneID="ztS-vI-HNC">
+            <objects>
+                <viewController id="GtW-qc-yVn" customClass="BookMarkViewController" customModule="Browser" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="V6F-EF-u2o">
+                        <rect key="frame" x="0.0" y="0.0" width="428" height="777"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="FCQ-vP-OH6">
+                                <rect key="frame" x="0.0" y="0.0" width="428" height="714"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="BookMarkCell" id="auP-CL-nqI">
+                                        <rect key="frame" x="0.0" y="24.333333969116211" width="428" height="43.666667938232422"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="auP-CL-nqI" id="It5-7e-5hW">
+                                            <rect key="frame" x="0.0" y="0.0" width="428" height="43.666667938232422"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="GtW-qc-yVn" id="D0D-X6-Psr"/>
+                                    <outlet property="delegate" destination="GtW-qc-yVn" id="gjy-Ku-vny"/>
+                                </connections>
+                            </tableView>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="2Ow-UN-g6U">
+                                <rect key="frame" x="0.0" y="722" width="428" height="55"/>
+                                <subviews>
+                                    <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yce-Yh-gh4">
+                                        <rect key="frame" x="0.0" y="0.0" width="0.0" height="42"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                        <state key="normal" title="Done"/>
+                                        <connections>
+                                            <action selector="doneEditButtonDidTapped:" destination="GtW-qc-yVn" eventType="touchUpInside" id="o0N-aH-8cC"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.98039215690000003" green="0.98039215690000003" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="55" id="sQi-Qn-hNX"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="a5l-rj-FFK"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="2Ow-UN-g6U" firstAttribute="leading" secondItem="V6F-EF-u2o" secondAttribute="leading" id="0Eq-Pk-9v6"/>
+                            <constraint firstItem="a5l-rj-FFK" firstAttribute="trailing" secondItem="2Ow-UN-g6U" secondAttribute="trailing" id="eT3-QB-TO6"/>
+                            <constraint firstAttribute="bottom" secondItem="2Ow-UN-g6U" secondAttribute="bottom" id="mhZ-iK-uEF"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="doneEditButton" destination="yce-Yh-gh4" id="fu4-ZC-4X5"/>
+                        <outlet property="tableView" destination="FCQ-vP-OH6" id="Wkj-fE-5ZK"/>
+                        <segue destination="I68-br-f0h" kind="unwind" identifier="unwindBookMarkToMain" unwindAction="unwindToMain:" id="CsN-pM-Qaw"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BKu-Ec-qQ8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="I68-br-f0h" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="-1020.5607476635513" y="416.30669546436286"/>
+        </scene>
+        <!--History View Controller-->
+        <scene sceneID="xMR-b9-N3x">
+            <objects>
+                <viewController id="GBY-H3-buR" customClass="HistoryViewController" customModule="Browser" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="9te-Q8-xWJ">
+                        <rect key="frame" x="0.0" y="0.0" width="428" height="777"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <searchBar contentMode="redraw" fixedFrame="YES" showsCancelButton="YES" translatesAutoresizingMaskIntoConstraints="NO" id="89A-tT-zEb">
+                                <rect key="frame" x="0.0" y="0.0" width="428" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="GBY-H3-buR" id="kwJ-Ze-HB2"/>
+                                </connections>
+                            </searchBar>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="cBF-H7-2Ec">
+                                <rect key="frame" x="0.0" y="722" width="428" height="55"/>
+                                <subviews>
+                                    <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Bh-Kl-RnD">
+                                        <rect key="frame" x="0.0" y="0.0" width="0.0" height="55"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                        <state key="normal" title="Done">
+                                            <color key="titleColor" name="AccentColor"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="doneEditButtonTapped:" destination="GBY-H3-buR" eventType="touchUpInside" id="Wr2-5F-G5j"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w3e-aS-RjO">
+                                        <rect key="frame" x="0.0" y="0.0" width="428" height="55"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                        <state key="normal" title="Clear">
+                                            <color key="titleColor" name="AccentColor"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="addBookMarkButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Prl-Xr-8sQ"/>
+                                            <action selector="clearButtonDidTapped:" destination="GBY-H3-buR" eventType="touchUpInside" id="5W3-fu-TdS"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.98039215690000003" green="0.98039215690000003" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="55" id="lw1-sy-1rb"/>
+                                </constraints>
+                            </stackView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="vnZ-bL-Z5z">
+                                <rect key="frame" x="0.0" y="44" width="428" height="670"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell hidden="YES" clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="HistoryObjectCell" textLabel="gIu-wE-FAu" detailTextLabel="Btp-vW-Yd4" rowHeight="67" style="IBUITableViewCellStyleSubtitle" id="b7d-46-Xm7">
+                                        <rect key="frame" x="0.0" y="24.333333969116211" width="428" height="67"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="b7d-46-Xm7" id="9F5-EC-quq">
+                                            <rect key="frame" x="0.0" y="0.0" width="428" height="67"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="gIu-wE-FAu">
+                                                    <rect key="frame" x="20" y="18" width="25" height="14.333333333333334"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="0.0"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Btp-vW-Yd4">
+                                                    <rect key="frame" x="19.999999999999996" y="34.333333333333336" width="40.666666666666664" height="13.333333333333334"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="GBY-H3-buR" id="cPQ-pp-oMY"/>
+                                    <outlet property="delegate" destination="GBY-H3-buR" id="KPK-Br-t5x"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="UgY-8Q-sAE"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="UgY-8Q-sAE" firstAttribute="trailing" secondItem="cBF-H7-2Ec" secondAttribute="trailing" id="1KY-F7-Dso"/>
+                            <constraint firstAttribute="bottom" secondItem="cBF-H7-2Ec" secondAttribute="bottom" id="EFh-bF-Vfj"/>
+                            <constraint firstItem="cBF-H7-2Ec" firstAttribute="leading" secondItem="9te-Q8-xWJ" secondAttribute="leading" id="hUz-TK-3c9"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="clearHistoryButton" destination="w3e-aS-RjO" id="Ebv-AM-49O"/>
+                        <outlet property="doneEditButton" destination="5Bh-Kl-RnD" id="dSR-Qf-J0v"/>
+                        <outlet property="historyTableView" destination="vnZ-bL-Z5z" id="0Dy-bY-ELx"/>
+                        <outlet property="searchBar" destination="89A-tT-zEb" id="IAQ-Xv-QUq"/>
+                        <segue destination="bzG-kB-UY3" kind="unwind" identifier="unwindHistoryToMain" unwindAction="unwindToMain:" id="0hB-bM-XdT"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oZ7-0X-4LJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="bzG-kB-UY3" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="-162.61682242990653" y="416.30669546436286"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="book" catalog="system" width="128" height="102"/>
+        <image name="chevron.backward" catalog="system" width="96" height="128"/>
+        <image name="chevron.forward" catalog="system" width="96" height="128"/>
+        <image name="clock" catalog="system" width="128" height="121"/>
+        <image name="plus" catalog="system" width="128" height="113"/>
+        <namedColor name="AccentColor">
+            <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="linkColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBlueColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
